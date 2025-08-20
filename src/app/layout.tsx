@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Coduit - Social Platform for Programmers",
+  title: "Coduit - Developer Community",
   description: "Connect, share, and learn with fellow programmers. Share code, tutorials, and build your developer network.",
   keywords: "programming, developers, social media, code sharing, tutorials, developer community",
   authors: [{ name: "Coduit Team" }],
