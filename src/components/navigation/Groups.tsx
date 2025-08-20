@@ -72,21 +72,14 @@ export default function Groups(){
                         className='w-full group flex items-center justify-start gap-2 p-2 pl-3 hover:bg-bg_white dark:hover:bg-dark800'
                         onClick={() => setOpenDropdown(null)}
                         >
-                        {typeof group.icon === 'string' ? (
-                          <Image 
-                            src={group.icon} 
-                            alt={`${group.name} icon`} 
-                            width={24} 
-                            height={24} 
-                            className="w-6 h-6 object-contain"
-                          />
-                        ) : (
-                          <img 
-                            src={group.icon.src} 
-                            alt={`${group.name} icon`} 
-                            className="w-6 h-6 object-contain"
-                          />
-                        )}
+                          <div className="w-6 h-6 relative">
+                            <Image
+                              src={group.icon}
+                              alt={`${group.name} icon`}
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
                           <span className="text-black dark:text-white font-times group-hover:text-sapphire">{group.name}</span>
                         </Link>
                      ))}

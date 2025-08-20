@@ -22,7 +22,7 @@ export default function PasswordReset(){
                     <div className="mt-2 w-full backdrop-blur-lg bg-white/5 p-3 rounded-md flex flex-col gap-1">
 
                         <div className="w-full">
-                            <p className="mt-2 text-center text-white font-plex-sans ">Enter your email address and we'll send you alink to reset your password</p>
+                            <p className="mt-2 text-center text-white font-plex-sans ">Enter your email address and we will send you alink to reset your password</p>
                         </div>
 
                         <form action="" className="mt-4 w-full">

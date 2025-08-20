@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Logo from '@/components/landing/Logo';
 
 
@@ -192,17 +193,35 @@ export default function Register () {
               <div className="w-full flex flex-col gap-2">
                 <div className="w-full flex items-center justify-between gap-2">
                   <Link href="" className='flex items-center justify-start gap-2 p-2 rounded-md bg-white'>
-                  <img src={github.src} alt="" className='w-8 h-8 rounded-full object-contain'/>
+                  <Image
+                    src={github}
+                    alt="Avatar"
+                    width={32}
+                    height={32}
+                    className="rounded-full contain"
+                  />
                   <p className="text-midnight font-bold text-sm">Signup with Github</p>
                   </Link>
                   <Link href="" className='flex items-center justify-start gap-2 p-2 rounded-md bg-white'>
-                  <img src={discord.src} alt="" className='w-8 h-8 rounded-full object-contain'/>
+                  <Image
+                    src={discord}
+                    alt="Avatar"
+                    width={32}
+                    height={32}
+                    className="rounded-full contain"
+                  />
                   <p className="text-midnight font-bold text-sm">Signup with Discord</p>
                   </Link>
                 </div>
                 <div className="w-full">
                   <Link href="" className='flex items-center justify-center gap-2 p-2 rounded-md bg-white'>
-                  <img src={google.src} alt="" className='w-8 h-8 rounded-full object-contain'/>
+                  <Image
+                    src={google}
+                    alt="Avatar"
+                    width={32}
+                    height={32}
+                    className="rounded-full contain"
+                  />
                   <div className="text-midnight font-bold">Continue with Google</div>
                   </Link>
                 </div>

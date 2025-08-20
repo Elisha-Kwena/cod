@@ -1,28 +1,9 @@
 'use client';
-
-import { useOutsideClick } from '@/lib/useOutsideClick';
-import { useState } from 'react';
 import Link from 'next/link';
-import {usePathname} from 'next/navigation'
-import clsx from 'clsx'
-import Image from 'next/image';
-import { menuItems } from '@/lib/menu';
-import { AnimatedDropdown } from '../ui/AnimatedDropdown';
 
-import defaultuser from '../../../public/default-user.png'
-import { 
-  PlusCircleIcon,
-  GlobeAltIcon,
-  ChevronDownIcon,
-  HomeIcon, 
-  VideoCameraIcon, 
-  UserGroupIcon, 
-  CodeBracketIcon,
-  BellIcon,
-  MagnifyingGlassIcon,
-} from '@heroicons/react/24/outline';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
-import { programmingLanguages , getProgrammingLanguages} from '@/data/mockData';
+import Image from 'next/image';
+import logo from '../../../public/coduit.png'
+
 
 import ToggleSidebar from './ToggleSidebar';
 
@@ -38,22 +19,6 @@ import Create from './Create';
 import Profile from './Profile';
 
 export default function MainNavbar() {
-  const pathname = usePathname()
-
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  const dropdownRef = useOutsideClick(() => {
-    if (openDropdown) {
-      setOpenDropdown(null);
-    }
-  });
-
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-
-  const toggleDropdown = (menu: string, e?: React.MouseEvent) => {
-    e?.stopPropagation(); 
-    setOpenDropdown(openDropdown === menu ? null : menu);
-  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black backdrop-blur-sm border-b border-gray-200 dark:border-dark700">
@@ -63,11 +28,14 @@ export default function MainNavbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/dashboard" className="flex items-center justify-start gap-2">
-              <img 
-                src="/coduit.png" 
-                alt="Coduit Logo" 
-                className="h-10 w-auto"
-              />
+              <div className="w-12 h-12 relative">
+                <Image
+                  src={logo.src}
+                  alt="Your Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <h1 className="text-sapphire font-extrabold font-['impact'] text-4xl">Coduit</h1>
             </Link>
           </div>

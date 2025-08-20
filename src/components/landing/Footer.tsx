@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image";
 import React from "react";
 
 import { useState } from "react";
@@ -29,14 +29,28 @@ const Footer: React.FC = () => {
 
                         <div className="flex items-center justify-center gap-2 mt-4">
                             <a href="" className="flex items-center justify-start gap-1 p-2 px-3 rounded-md bg-white">
-                                <img src={apple.src} alt="" className="w-10 h-10 object-contain" />
+                                <div className="w-10 h-10 relative">
+                                  <Image
+                                    src={apple.src}
+                                    alt="Apple logo"
+                                    fill
+                                    className="object-contain"
+                                  />
+                                </div>
                                 <div className="flex flex-col gap-0 items-start justify-center">
                                     <h2 className="text-black  text-sm lg:text-md">Download on the</h2>
                                     <h1 className=" font-extrabold text-xl -mt-2 text-black">App Store</h1>
                                 </div>
                             </a>
                             <a href="" className="flex items-center justify-start gap-1 p-2 px-3 rounded-md bg-white">
-                                <img src={playstore.src} alt="" className="w-10 h-10 object-contain" />
+                                <div className="w-10 h-10 relative">
+                                  <Image
+                                    src={playstore}
+                                    alt="Apple logo"
+                                    fill
+                                    className="object-contain"
+                                  />
+                                </div>
                                 <div className="flex flex-col gap-0 items-start justify-center">
                                     <h2 className="text-black">GET IT ON</h2>
                                     <h1 className=" font-extrabold text-xl -mt-2 text-black">Google Play</h1>

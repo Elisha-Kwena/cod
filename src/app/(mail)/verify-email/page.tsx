@@ -1,5 +1,4 @@
 "use client"
-import React, { useState } from 'react';
 import Link from 'next/link';
 import Logo from '@/components/landing/Logo';
 import Background from '@/components/ui/auth/Background';
@@ -58,7 +57,7 @@ export default function VerifyEmail () {
                             </div>
                             <div className="space-y-4">
                                 <p className="text-white/70">
-                                    If you haven't received a verification email, you can request a new one.
+                                    If you have not received a verification email, you can request a new one.
                                 </p>
                                 <button
                                     className="inline-block px-6 py-3 font-medium text-white transition-all duration-300 rounded-md bg-sapphire w-full hover:bg-electric/80"

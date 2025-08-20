@@ -12,7 +12,7 @@ export default function Home(){
               <Link 
                 href="/dashboard" 
                 className={clsx(
-                  'font-bold capitalize transition-all duration-300',
+                  'font-bold capitalize text-xl transition-all duration-300',
                   {
                     // Active state (always sapphire)
                     '!text-sapphire': pathname === "/dashboard",

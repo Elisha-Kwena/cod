@@ -138,17 +138,26 @@ export interface Community {
   isModerator: boolean;
 }
 
+interface NotificationData {
+  postId?: string;
+  postTitle?: string;
+  commentId?: string;
+  followerId?: string;
+  followerName?: string;
+  mentionId?: string;
+  systemMessage?: string;
+  // Add other properties as needed for different notification types
+}
 export interface Notification {
   id: string;
   userId: string;
   type: 'like' | 'comment' | 'follow' | 'mention' | 'system';
   title: string;
   message: string;
-  data: any;
+  data: NotificationData; // Fixed: Replaced 'any' with NotificationData
   isRead: boolean;
   createdAt: string;
 }
-
 // Mock Users
 export const mockUsers: User[] = [
   {

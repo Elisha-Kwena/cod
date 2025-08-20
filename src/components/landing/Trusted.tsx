@@ -1,5 +1,5 @@
 
-
+import Image from "next/image"
 const trustee=[
     {id:1,logo:"https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",name:"Sass"},
     {id:2,logo:"https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg", name:"NPM"},
@@ -18,7 +18,14 @@ export default function Trusted () {
                 <div className="w-full flex items-center justify-center lg:justify-between flex-wrap gap-4 mt-8">
                     {trustee.map((item) => (
                         <div key={item.id} className="flex items-center justify-center gap-2">
-                            <img src={item.logo} alt={item.name} className="w-20 h-20 opacity-70 hover:opacity-100 transition-all duration-300" />
+                            <div className="w-16 h-16 md:w-20 md:h-20 relative opacity-70 hover:opacity-100 transition-all duration-300">
+                              <Image
+                                src={item.logo}
+                                alt={item.name}
+                                fill
+                                className="object-contain"
+                              />
+                            </div>
                         </div>
                     ))}
                 </div>

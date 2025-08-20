@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/landing/Navbar';
 import Hero from '@/components/landing/Hero';
 import Trusted from '@/components/landing/Trusted';
@@ -46,11 +47,25 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="w-full mt-12 bg-dark800 pb-16">
-                    <img src={waves.src} alt="" className='w-full'/>
+                  <div className="w-full relative" style={{ height: '200px' }}>
+                      <Image
+                        src={waves.src}
+                        alt="Decorative waves pattern"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="w-full flex items-center justify-center">
                         <div className="w-full flex gap-10 px-4 lg:px-12 flex-col-reverse lg:flex-row items-center justify-between">
                             <div className="left w-full lg:w-1/2">
-                                <img src={banner.src} alt="" className="w-full rounded-t-lg" />
+                              <div className="w-full relative" style={{ paddingTop: '56.25%' }}> {/* 16:9 aspect ratio */}
+                                <Image
+                                  src={banner.src}
+                                  alt="Banner image"
+                                  fill
+                                  className="rounded-t-lg object-cover"
+                                />
+                              </div>
                             </div>
                             <div className="right w-full lg:w-1/2">
                                 <Stats/>

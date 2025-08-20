@@ -24,12 +24,12 @@ export default function VerifyEmailSent () {
                     </div>
                     <div className="w-full">
                         <h1 className="text-white font-bold text-2xl text-center ">Verification Email Sent!</h1>
-                        <p className="text-white font-bold font-plex-sans text-md ">We've sent a verification link to your email address. Please check your inbox and click the link to verify your account</p>
+                        <p className="text-white font-bold font-plex-sans text-md ">We have sent a verification link to your email address. Please check your inbox and click the link to verify your account</p>
                     </div>   
                     <div className="mt-2 w-full backdrop-blur-lg bg-white/5 p-3 rounded-md flex flex-col gap-1">
 
                         <div className="w-full">
-                            <h1 className="font-extrabold text-white text-lg">Didn't receive the email</h1>
+                            <h1 className="font-extrabold text-white text-lg">Did not receive the email</h1>
                             <p className="mt-2 text-white font-plex-sans ">Check your spam folder or enter your email below to request a new verification link</p>
                         </div>
 
