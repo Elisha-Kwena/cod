@@ -3,13 +3,19 @@ import Image from 'next/image';
 
 interface MembersProps {
   profile: string;
-  left: string;
+  index:number;
 }
 
-const Members: React.FC<MembersProps> = ({ profile, left }) => {
+const Members: React.FC<MembersProps> = ({ profile,index }) => {
+  const leftPosition = index * 44;
   return (
         <>
-                <div className={`w-16 top-2 h-16 rounded-full absolute flex items-center justify-center ${left}`}>
+                <div className={`w-16 top-2 h-16 rounded-full absolute flex items-center justify-center `}
+                style={{
+                  left:`${leftPosition}px`,
+                  zIndex:10 - index
+                }}
+                >
                 <Image
                 src={profile}
                 alt="User profile"

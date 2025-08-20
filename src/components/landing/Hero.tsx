@@ -48,11 +48,11 @@ export default function Hero() {
             </div>
             <div className="w-full flex items-center justify-between lg:justify-start mt-3 gap-6 lg:gap-0">
                 <div className="w-1/2 h-20 relative">
-                {members.slice(0,5).map(user =>(
-                    <Members 
+                {members.slice(0,5).map((user, index) => (
+                    <Members
                         key={user.id}
-                        profile={typeof user.profile === "string" ? user.profile : (user.profile.src ?? "")}
-                        left={user.left}
+                        profile={user.profile.src}
+                        index={index}
                     />
                 ))}
                 </div>
