@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  trailingSlash: false,
+  images: {
+    unoptimized: true // Disable Next.js image optimization if using Netlify's CDN
+  },
   /* config options here */
   server: {
     host: true, // Listen on all network interfaces

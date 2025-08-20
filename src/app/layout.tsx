@@ -30,11 +30,19 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico'
   },
   manifest: '/site.webmanifest',
-  themeColor: '#000000',
-  viewport: 'width=device-width, initial-scale=1',
 };
 
+// ADDED: generateViewport function
+export function generateViewport() {
+  return {
+    themeColor: '#000000',
+    width: 'device-width',
+    initialScale: 1,
+  }
+}
+
 import { ThemeScript } from "@/contexts/ThemeScript";
+import '../lib/fontawesome'
 
 export default function RootLayout({
   children,

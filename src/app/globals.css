@@ -15,3 +15,76 @@
     font-family: 'Lora', serif;
   }
 }
+
+/* Landing page.css */
+.hero-section{
+  background-image: linear-gradient(to right,#000000,#000000,#000000,rgb(4, 4, 23),rgb(4, 4, 23));
+}
+.dummy-post {
+  position: relative;
+  z-index: 10;
+}
+.dummy-post::before{
+  position: absolute;
+  content: '';
+  top: -0.1rem;
+  left: -0.1rem;
+  border-radius: 10px;
+  width: calc(100% + 0.2rem);
+  height: calc(100% + 0.2rem);
+  background-image: linear-gradient(to top right,cyan,rgb(255, 0, 149));
+  box-shadow: 0px 0px 10px cyan;
+  z-index: -5;
+}
+.cta{
+  background-image: linear-gradient(to right,#000000,#000000,rgb(45, 42, 42));
+}
+.social:hover{
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 50px blue,
+  0 10px 100px blue
+  ;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+/* auth custom  stylings */
+.input-continer{
+  position:relative;
+
+}
+.input-continer label{
+  transition: all 0.3s ease-in-out;
+  padding: 1px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  
+}
+.input-continer input:focus{
+  outline: none;
+  border-left: 4px solid blue;
+}
+.input-continer input:valid{
+  outline: none;
+  border-left: 4px solid blue;
+}
+.icon-div{
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.input-continer input:valid ~ label,
+.input-continer input:focus ~ label{
+  transform:translateY(-14px) ;
+  background-color: rgb(255, 255, 255,0.5);
+  border: 0.5px solid white;
+  color: blue;
+}
+.input-continer input:valid ~ .icon-div,
+.input-continer input:focus ~ .icon-div{
+  transform:translateY(-14px) ;
+  background-color: rgb(255, 255, 255,0.5);
+  border: 0.5px solid white;
+  color: blue;
+}

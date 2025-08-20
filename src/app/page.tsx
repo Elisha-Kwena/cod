@@ -1,109 +1,66 @@
 import Link from 'next/link';
-import { 
-  CodeBracketIcon, 
-  VideoCameraIcon, 
-  UserGroupIcon, 
-  RocketLaunchIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
+import Navbar from '@/components/landing/Navbar';
+import Hero from '@/components/landing/Hero';
+import Trusted from '@/components/landing/Trusted';
+import Features from '@/components/landing/Features';
+import Feedback from '@/components/landing/Feedback';
+import Stats from '@/components/landing/Stats';
+import Footer from '@/components/landing/Footer';
+import waves from '../../public/waves.svg'
+import banner from '../../public/banner.png'
+
 
 export default function LandingPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 dark:from-dark900 dark:via-dark800 dark:to-depth">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Main Heading */}
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-electric via-neon_blue to-neon_purple bg-clip-text text-transparent">
-              Coduit
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 dark:text-chrome mb-8 leading-relaxed">
-              The ultimate social platform for programmers
-            </p>
-            <p className="text-lg text-gray-600 dark:text-chrome/80 mb-12 max-w-2xl mx-auto">
-              Share code, create tutorials, build your developer network, and learn from the best in the industry. 
-              Where Facebook meets YouTube, designed specifically for developers.
-            </p>
+      <Navbar/>
+      <main className="w-full">
+        <section className="w-full hero-section">
+          <div className="herosection w-[90%] mx-auto pt-[70px]">
+            <Hero/>
           </div>
+        </section>
+        <section className="trustes w-full bg-dark800 py-10">
+            <div className="w-full lg:w-[90%] mx-auto">
+                <Trusted/>
+            </div>
+        </section>
+        <section className="features w-full bg-black p-4 lg:p-0 ">
+            <div className="w-full lg:w-[90%] mx-auto">
+                <Features/>
+            </div>
+        </section>
+        <section className="feedback w-full bg-dark800 py-12">
+            <div className="w-full lg:w-[90%] mx-auto">
+                <Feedback/>
+            </div>
+        </section>
+        <section className="w-full bg-black lg:p-0 px-2 flex flex-col items-center justify-center gap-4">
+                <div className="cta rounded-lg border border-chrome p-3 lg:p-6 mt-16 w-full lg:w-[60%] mx-auto">
+                    <h1 className="text-2xl lg:text-5xl font-plex-sans font-extrabold text-center text-white">Ready to join the Community?</h1>
+                    <p className="text-chrome mt-6 text-md lg:text-xl font-fira-code text-center">Join a community of developers who are passionate about coding and building amazing things.</p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link 
-              href="/register" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-electric hover:bg-neon_blue text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-electric/25"
-            >
-              Get Started Free
-              <ArrowRightIcon className="ml-2 h-5 w-5" />
-            </Link>
-            <Link 
-              href="/login" 
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-electric text-electric hover:bg-electric hover:text-white font-semibold rounded-lg transition-all duration-300"
-            >
-              Sign In
-            </Link>
-          </div>
-
-          {/* Feature Highlights */}
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-electric/20 rounded-full mb-4">
-                <CodeBracketIcon className="h-8 w-8 text-electric" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Code Sharing</h3>
-              <p className="text-gray-600 dark:text-chrome/80">Share your code snippets, projects, and solutions with syntax highlighting</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-neon_pink/20 rounded-full mb-4">
-                <VideoCameraIcon className="h-8 w-8 text-neon_pink" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Video Tutorials</h3>
-              <p className="text-gray-600 dark:text-chrome/80">Create and watch programming tutorials, live coding sessions, and tech talks</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-lime_green/20 rounded-full mb-4">
-                <UserGroupIcon className="h-8 w-8 text-lime_green" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Developer Network</h3>
-              <p className="text-gray-600 dark:text-chrome/80">Connect with fellow developers, join communities, and collaborate on projects</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-neon_blue rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-3 h-3 bg-neon_pink rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-40 left-20 w-2 h-2 bg-lime_green rounded-full animate-pulse delay-2000"></div>
-          <div className="absolute bottom-20 right-10 w-3 h-3 bg-electric rounded-full animate-pulse delay-1500"></div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 px-4 bg-white dark:bg-dark900">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-electric mb-2">10K+</div>
-              <div className="text-gray-600 dark:text-chrome">Developers</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-neon_pink mb-2">5K+</div>
-              <div className="text-gray-600 dark:text-chrome">Tutorials</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-lime_green mb-2">20K+</div>
-              <div className="text-gray-600 dark:text-chrome">Code Snippets</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-neon_blue mb-2">100+</div>
-              <div className="text-gray-600 dark:text-chrome">Communities</div>
-            </div>
-          </div>
-        </div>
-      </section>
+                    <div className="w-full flex items-center justify-center gap-2 mt-6">
+                        <Link href="/register" className='bg-sapphire p-2 lg:p-3 text-white font-fira-code font-extrabold border-[2px] border-sapphire text-center text-sm lg:text-xl rounded-sm transition-all duration-300 hover:bg-transparent hover:text-sapphire hover:-translate-y-2'>Get Started Now</Link>
+                        <Link href="" className='bg-transparent p-2 lg:p-3 text-white font-fira-code font-extrabold border-[2px] border-white text-center text-sm lg:text-xl rounded-sm transition-all duration-300 hover:border-sapphire hover:text-sapphire hover:-translate-y-2'>Explore communities</Link>
+                    </div>
+                </div>
+                <div className="w-full mt-12 bg-dark800 pb-16">
+                    <img src={waves.src} alt="" className='w-full'/>
+                    <div className="w-full flex items-center justify-center">
+                        <div className="w-full flex gap-10 px-4 lg:px-12 flex-col-reverse lg:flex-row items-center justify-between">
+                            <div className="left w-full lg:w-1/2">
+                                <img src={banner.src} alt="" className="w-full rounded-t-lg" />
+                            </div>
+                            <div className="right w-full lg:w-1/2">
+                                <Stats/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <Footer/>
+      </main>
     </>
   );
 }
