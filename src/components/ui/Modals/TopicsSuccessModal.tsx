@@ -105,7 +105,7 @@ export default function TopicsSuccessModal({
             {/* Error Message */}
             <h3 className="text-white text-xl font-bold mb-2 text-center">Oops!</h3>
             <p className="text-gray-300 text-center mb-4">
-              You haven't selected any topics yet.
+              You haven&apos;t selected any topics yet.
             </p>
             <p className="text-gray-400 text-sm text-center mb-6">
               Please select at least one topic to continue.
