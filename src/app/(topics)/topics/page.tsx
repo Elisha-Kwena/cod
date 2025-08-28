@@ -165,7 +165,7 @@ export default function Topics(){
                 </div>
 
                 <div className="w-full">
-                    <h1 className="text-white">Default Topics</h1>
+                    <h1 className="text-black dark:text-white">Default Topics</h1>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2">
                         {defaultTopics.map((topic, index) => (
                           <button

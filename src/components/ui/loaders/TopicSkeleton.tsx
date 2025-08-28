@@ -26,7 +26,7 @@ export default function TopicsSkeleton() {
             {Array.from({ length: 5 }).map((_, index) => (
               <div
                 key={index}
-                className="h-16 bg-gray-200 dark:bg-dark-700 rounded-lg shadow-lg border border-gray-300 dark:border-dark-600"
+                className="h-16 bg-gray-200 dark:bg-dark-700 rounded-lg shadow-lg border border-gray-300 dark:border-chrome/10"
               ></div>
             ))}
           </div>
@@ -39,7 +39,7 @@ export default function TopicsSkeleton() {
               {Array.from({ length: 30 }).map((_, index) => (
                 <div
                   key={index}
-                  className="h-12 bg-gray-200 dark:bg-dark-700 rounded-lg border border-gray-300 dark:border-dark-600"
+                  className="h-12 bg-gray-200 dark:bg-dark-700 rounded-lg border border-gray-300 dark:border-chrome/10"
                 ></div>
               ))}
             </div>
@@ -47,8 +47,8 @@ export default function TopicsSkeleton() {
   
           {/* Buttons Skeleton */}
           <div className="flex flex-col lg:flex-row w-full items-center justify-center gap-4 mt-6">
-            <div className="w-full lg:w-auto h-12 bg-gray-300 dark:bg-dark-700 rounded-[5px] border-2 border-gray-400 dark:border-dark-600"></div>
-            <div className="w-full lg:w-auto h-12 bg-gray-300 dark:bg-dark-700 rounded-[5px] border-2 border-gray-400 dark:border-dark-600"></div>
+            <div className="w-full lg:w-auto h-12 bg-gray-300 dark:bg-dark-700 rounded-[5px] border-2 border-gray-400 dark:border-chrome/10"></div>
+            <div className="w-full lg:w-auto h-12 bg-gray-300 dark:bg-dark-700 rounded-[5px] border-2 border-gray-400 dark:border-chrome/10"></div>
           </div>
         </div>
       </div>
