@@ -15,6 +15,41 @@
     font-family: 'Lora', serif;
   }
 }
+/* @layer components {
+  .custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+  }
+
+  .custom-select option {
+    @apply bg-white dark:bg-dark800 text-gray900 dark:text-gray-300 py-1;
+  }
+
+  .custom-select option:checked {
+    @apply bg-gray-100 dark:bg-gray-700 text-blue-600 dark:text-sapphire;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Landing page.css */
 .hero-section{
@@ -92,7 +127,7 @@
   color: blue;
 }
 
-select,::picker(select){
+/* select,::picker(select){
   appearance: base-select;
   overflow: hidden;
   border-radius: 4px;
@@ -104,4 +139,4 @@ select,::picker(select){
 option:checked{
   background: rgb(58, 55, 55);
   color: rgb(25, 25, 185);
-}
+} */
